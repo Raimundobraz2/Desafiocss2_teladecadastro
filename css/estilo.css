@@ -1,0 +1,128 @@
+html,
+body {
+    height: 100%;
+}
+
+:root {
+    --color-backround: #DAE8E6;
+    --color--form: #FFFFFF;
+    --color-h1: #8C5FDB;
+    --color-button: #8C5FDB;
+    --color-input: #2E2D2E;
+    --color-p: #2E2D2E;
+    --color-buttotexto: #FFFFFF;
+    ;
+}
+
+body {
+    background: var(--color-backround);
+    max-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Noto Sans', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.form {
+    width: min(460px, 100%);
+    padding: 2vh 4vh;
+    height: 80vh;
+    background: var(--color--form);
+    position: relative;
+    top: -1rem;
+    border-radius: 6px;
+    box-shadow: 0px 20px 100px rgba(0, 0, 0, 0.116);
+}
+
+.form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form .texto h1 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--color-h1);
+    text-transform: uppercase;
+    position: absolute;
+    top: 2rem;
+    left: 2.9rem;
+}
+
+.form p {
+    font-size: .8rem;
+    font-weight: 400;
+    position: relative;
+    top: 3.2rem;
+    left: 1.4rem;
+    color: var(--color-p);
+}
+
+.control_input {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+input {
+    position: relative;
+    top: 4rem;
+    margin: .3rem;
+    width: min(390px, 100%);
+    padding: 2vh;
+    border-radius: 4px;
+    border: 2px solid var(--color-button);
+    padding-left: 16px;
+    font-weight: 500;
+    color: var(--color-input);
+    font-size: clamp(1rem, 1vw, 2rem);
+}
+
+::placeholder {
+    color: var(--color-input);
+    font-weight: 500;
+}
+
+button {
+    position: relative;
+    width: min(421px, 100%);
+    padding: 2vh;
+    border-radius: 4px;
+    position: relative;
+    top: 5rem;
+    border: none;
+    background: var(--color-button);
+    color: var(--color-buttotexto);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .form {
+        max-width: 290px;
+    }
+}
+
+@media (max-width: 200px) {
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .form {
+        max-width: 200px;
+    }
+
+}
